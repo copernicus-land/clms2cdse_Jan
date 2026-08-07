@@ -54,7 +54,6 @@
         ]
     },
     "properties": {
-        "created":"<DATE>", /* REQUIRED. Creation date and time of a product, in UTC. */
         "datetime":"<DATE>", /* REQUIRED. The searchable date and time of the assets, which must be in UTC. It is formatted according to RFC 3339, section 5.6." */
         "description":"<STRING>", /* OPTIONAL. Detailed multi-line description to fully explain the STAC entity. CommonMark 0.29 syntax MAY be used for rich text representation. */
         "end_datetime":"<DATE>", /* REQUIRED. The last or end date and time for the resource, in UTC. It is formatted as date-time according to RFC 3339, section 5.6. */
@@ -88,7 +87,6 @@
             "<PROJ_TRANSFORM_7>",
             "<PROJ_TRANSFORM_8>"
         ],
-        "published":"<DATE>", /* ADDED BY CDSE. Date and time the corresponding STAC entity or Asset (see below) was updated last, in UTC. */
         "sar:center_frequency":"<NUMBER>", /* REQUIRED IF APPLICABLE The center frequency of the instrument, in gigahertz (GHz). */
         "sar:frequency_band":"<STRING>", /* REQUIRED IF APPLICABLE  The common name for the frequency band to make it easier to search for bands across instruments. https://github.com/stac-extensions/sar?tab=readme-ov-file#sarfrequency_band---common-frequency-band-names */
 	    "sar:instrument_mode":"<STRING>", /* REQUIRED IF APPLICABLE The name of the sensor acquisition mode that is commonly used. This should be the short name, if available. For example, WV for Wave mode of Sentinel-1 and Envisat ASAR satellites. */
@@ -112,11 +110,11 @@
     },
     "collection":"<CDSE_COLLECTION_NAME>", /* REQUIRED */
     "links": [
-	{
-		"rel":"SDI_URL", /* REQUIRED. */
-		"href":"<Relevant URL from https://sdi.eea.europa.eu/catalogue/srv/eng/catalog.search>",
-		"type":"text/html"
-	}
+		{
+			"rel":"SDI_URL", /* REQUIRED. */
+			"href":"<Relevant URL from https://sdi.eea.europa.eu/catalogue/srv/eng/catalog.search>",
+			"type":"text/html"
+		}
     ],
     "assets": {
         "Product": {
